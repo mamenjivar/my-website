@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe, faFolderOpen } from "@fortawesome/free-solid-svg-icons"
+import { faGlobe, faFolderOpen, faUser } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedin, faInstagram, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Overlay = () => {
@@ -21,6 +21,7 @@ const Overlay = () => {
                 <p>Fullstack Web Developer</p>
                 <p>Los Angeles, CA</p>
 
+                <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
                 <FontAwesomeIcon icon={faGlobe}></FontAwesomeIcon>
                 <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
                 <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
