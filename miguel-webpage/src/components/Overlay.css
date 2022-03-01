@@ -1,0 +1,16 @@
+#profile-picture {
+    width: 500px;
+    height: 100%;
+    border-radius: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+* {
+    background-color: black;
+    color: white;
+}
+
+.bordering {
+    height: 100%;
+}
