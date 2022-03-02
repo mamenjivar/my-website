@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 // fontawesome
@@ -9,24 +9,36 @@ import { faLinkedin, faInstagram, faTwitter, faGithub } from '@fortawesome/free-
 import "./Overlay.css";
 import pfp from '../utils/img/pfp.jpg';
 
+import Biography from "./Biography";
 
 const Overlay = () => {
+  const [bio, setBio] = useState(false);
+
+  // toggles the bio
+  const onclickBioHandler = () => {
+    setBio(!bio);
+  }
+
   return (
     <Fragment>
       <Container>
         <Row >
           <Col>
             <div className="text-center">
-                <img id="profile-picture" src={pfp} alt="profile"/>
+                <img id="profile-picture" src={pfp} alt="profile" onClick={onclickBioHandler}/>
                 <h1>Miguel Menjivar</h1>
             </div>
           </Col>
           <Col>
-          <div class="text-center bordering d-flex flex-column justify-content-around">
+          <div className="text-center bordering d-flex flex-column justify-content-around">
+          {bio ? <Biography /> : 
+            <Fragment>
+
                 <h1 >Urban TXT: Teens Exploring Technology</h1>
                 <h1>Fullstack Web Developer</h1>
                 <h1 >Los Angeles, CA</h1>
-
+            </Fragment>
+          }
                 <div className="display-4">
                   <FontAwesomeIcon className="pr-2" icon={faUser}></FontAwesomeIcon>
                   <FontAwesomeIcon icon={faGlobe}></FontAwesomeIcon>
