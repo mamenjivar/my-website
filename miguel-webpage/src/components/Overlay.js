@@ -15,7 +15,7 @@ const Overlay = () => {
   const [bio, setBio] = useState(false);
 
   // toggles the bio
-  const onclickBioHandler = () => {
+  const onClickBioHandler = () => {
     setBio(!bio);
   }
 
@@ -25,7 +25,7 @@ const Overlay = () => {
         <Row >
           <Col>
             <div className="text-center">
-                <img id="profile-picture" src={pfp} alt="profile" onClick={onclickBioHandler}/>
+                <img id="profile-picture" src={pfp} alt="profile" onClick={onClickBioHandler}/>
                 <h1>Miguel Menjivar</h1>
             </div>
           </Col>
@@ -39,13 +39,13 @@ const Overlay = () => {
                 <h1 >Los Angeles, CA</h1>
             </Fragment>
           }
-                <div className="display-4">
-                  <FontAwesomeIcon className="pr-2" icon={faUser}></FontAwesomeIcon>
+                <div className="display-4 d-flex justify-content-around">
+                  <FontAwesomeIcon className="pr-2" icon={faUser} onClick={onClickBioHandler}></FontAwesomeIcon>
                   <FontAwesomeIcon icon={faGlobe}></FontAwesomeIcon>
-                  <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
-                  <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
-                  <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
-                  <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+                  <a href="https://www.linkedin.com/in/mamenjivar" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon></a>
+                  <a href="https://www.instagram.com/miggy223/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a>
+                  <a href="https://twitter.com/miggsception" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></a>
+                  <a href="https://github.com/mamenjivar" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a>
                   <FontAwesomeIcon icon={faFolderOpen}></FontAwesomeIcon>
                 </div>
             </div>
